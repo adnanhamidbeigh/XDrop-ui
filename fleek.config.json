@@ -1,0 +1,9 @@
+{
+  "sites": [
+    {
+      "slug": "puny-gigabyte-skinny",
+      "distDir": ".",
+      "buildCommand": "npm run build"
+    }
+  ]
+}
