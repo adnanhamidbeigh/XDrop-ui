@@ -1,12 +1,11 @@
-import Header from '@/components/Header';
-import XDropForm from '@/components/XDropForm';
+"use client"
+import HomePage from "@/components/HomePage"
+import { useAccount } from "wagmi"
 export default function Home() {
+  const { isConnected } = useAccount()
   return (
-
-    <main >
-      <Header />
-      <h1>This is a token airdrop app </h1>
-      <XDropForm />
+    <main>
+      {isConnected ? <HomePage /> : <div>Connect Your Account</div>}
     </main>
-  );
+  )
 }
